@@ -1,0 +1,193 @@
+/* General Styles for Semi-Dark Theme with Unique Colors */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background-color: #2e2b3e; /* Dark purple background */
+    color: #f1f1f1;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #3a3554; /* Darker purple for header */
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+header .profile-pic {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 5px solid #ff6f61; /* Coral accent color */
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out, border-color 0.3s ease;
+}
+
+header h1 {
+    color: #ff6f61;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+header h1.floating {
+    animation: bounce 2s infinite alternate ease-in-out;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #b8b8d1;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #ff6f61;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff8f81; /* Lighter coral on hover */
+}
+
+/* Keyframes for Bounce Animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Profile Picture Hover Effect */
+header .profile-pic:hover {
+    transform: scale(1.1) rotate(5deg);
+    border-color: #ff8f81;
+}
+
+/* Sections */
+section {
+    padding: 30px;
+    margin: 25px auto;
+    max-width: 800px;
+    background-color: #3a3554;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s, background-color 0.3s;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    background-color: #453c5e;
+}
+
+section h2 {
+    font-size: 2.2em;
+    color: #ff6f61;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+/* Gallery Styles */
+#certificate-gallery .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    margin-top: 25px;
+}
+
+.certificate-card {
+    background-color: #3e3852;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.4s;
+    width: 100%;
+    max-width: 220px;
+}
+
+.certificate-card img {
+    width: 100%;
+    border-bottom: 3px solid #ff6f61;
+}
+
+.certificate-card p {
+    padding: 12px;
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+.certificate-card:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3a3554;
+    color: #b8b8d1;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Fade-up Animation for Visibility */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
